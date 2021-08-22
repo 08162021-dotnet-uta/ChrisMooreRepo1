@@ -5,7 +5,7 @@ namespace Project0.StoreApplication.Storage
 {
   public class StoreRepository
   {
-    public List<Store> Stores {get; set;}
+    public List<Store> Stores { get; }
 
     public StoreRepository()
     {
@@ -13,7 +13,7 @@ namespace Project0.StoreApplication.Storage
       {
         new Store() { Name = "Store001" },
         new Store() { Name = "Store002" },
-        new Store() { Name = "Store003" } 
+        new Store() { Name = "Store003" }
       };
     }
   }
