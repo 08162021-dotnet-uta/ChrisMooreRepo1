@@ -1,6 +1,7 @@
 ﻿using System;
-using Project0.StoreApplication.Domain.Models;
+using Project0.StoreApplication.Domain.Abstracts;
 using Project0.StoreApplication.Storage;
+using Serilog;
 
 namespace Project0.StoreApplication.Client
 {
@@ -8,6 +9,10 @@ namespace Project0.StoreApplication.Client
   {
     static void Main(string[] args)
     {
+      Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
+
+
+
       PrintStoreLocations();
       Console.WriteLine(SelectAStore());
 
@@ -15,6 +20,8 @@ namespace Project0.StoreApplication.Client
     }
     static void PrintStoreLocations()
     {
+      Log.Information("This is for store output");
+
       var storeRepository = new StoreRepository();
       int i = 1;
 
@@ -27,6 +34,8 @@ namespace Project0.StoreApplication.Client
 
     static Store SelectAStore()
     {
+      Log.Information("Grabbing a store");
+
       var sr = new StoreRepository().Stores;
 
       Console.WriteLine("Select a Store: ");
