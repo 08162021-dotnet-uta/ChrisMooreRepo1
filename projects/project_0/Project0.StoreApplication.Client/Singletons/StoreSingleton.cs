@@ -13,7 +13,7 @@ namespace Project0.StoreApplication.Client.Singletons
     private static StoreSingleton _storeSingleton;
     private static readonly StoreRepository _storeRepository = new StoreRepository();
 
-    public List<Store> Stores { get; private set; }
+    public List<Store> Stores { get;}
     public static StoreSingleton Instance
     {
       get

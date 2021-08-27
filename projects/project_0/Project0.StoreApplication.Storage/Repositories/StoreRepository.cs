@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-// using Project0.StoreApplication.Domain.Abstracts;
 using Project0.StoreApplication.Domain.Interfaces;
 using Project0.StoreApplication.Domain.Models;
 using Project0.StoreApplication.Storage.Adapters;
@@ -7,18 +6,22 @@ using Project0.StoreApplication.Storage.Adapters;
 namespace Project0.StoreApplication.Storage.Repositories
 {    public class StoreRepository : IRepository<Store>
   {
-    private const string _path = @"/home/chris/revature/ChrisMooreRepo1/data/stores.xml";
+    private const string _path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/stores.xml";
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
 
+    /// <summary>
+    /// Store Repository constructor 
+    /// </summary>
     public StoreRepository()
     {
        if (_fileAdapter.ReadFromFile<Store>(_path) == null)
       {
-        _fileAdapter.WriteToFile<Store>(_path, new List<Store>(){
+        _fileAdapter.WriteToFile<Store>(_path, new List<Store>()
+        {
 
-          new Store(),
-          new Store(),
-          new Store()
+          new Store(){Name = "GamerX"},
+          new Store(){Name = "TechX"},
+          new Store(){Name = "MooreX"}
 
         });
       }
@@ -61,25 +64,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     {
       throw new System.NotImplementedException();
     }
-  
-    
-    // public List<Store> Stores { get; }
 
-    // public StoreRepository()
-    // {
-    //   // var fileAdapter = new FileAdapter();
-
-    //   // if(fileAdapter.ReadFromFile() == null)
-    //   // {
-    //   //   fileAdapter.WriteToFile(new List<Store>();
-    //   // }
-
-    //   Stores = new List<Store>()
-    //   {
-    //     new GamerStore(),
-    //     new MooreStore(),
-    //     new TechStore()
-    //   };
   }
   
 }

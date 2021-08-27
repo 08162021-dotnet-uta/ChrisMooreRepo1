@@ -18,6 +18,10 @@ namespace Project0.StoreApplication.Domain.Models
     /// 
     /// </summary>
     /// <returns></returns>
+    public override string ToString()
+    {
+      return Name;
+    }
   }
 
 
