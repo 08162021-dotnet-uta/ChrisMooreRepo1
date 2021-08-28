@@ -6,14 +6,12 @@ using System.Xml.Serialization;
 namespace Project0.StoreApplication.Storage.Adapters
 {
   /// <summary>
-  /// 
+  /// The file adapter class to save and read data
   /// </summary>
-  
   public class FileAdapter
   {
-    /// <summary>
-    /// Takes file path 
-    /// Returns list of objects
+    /// <summary> 
+    /// Reads from file to return list of objects; Deserializes the file.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public List<T> ReadFromFile<T>(string path) where T : class
@@ -32,7 +30,7 @@ namespace Project0.StoreApplication.Storage.Adapters
     }
 
     /// <summary>
-    /// Takes the path to a file and a list of objects
+    /// Writes to a file through path; Serializes the data in Xml file.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public void WriteToFile<T>(string path, List<T> data) where T : class
@@ -44,42 +42,4 @@ namespace Project0.StoreApplication.Storage.Adapters
       xml.Serialize(file, data);
     }
   }
-  
-  // Still Learning how to implement Serialization: 
-  // public class FileAdapter
-  // {
-  //   public List<Store> ReadFromFile()
-  //   {
-  //       // file path
-  //       var path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/project_0.stores.xml";
-        
-  //       // open path
-  //       var file = new StreamReader(path);
-        
-  //       // serialize object
-  //       var xml = new XmlSerializer(typeof(List<Store>));
-        
-  //       // write file
-  //       var stores = xml.Deserialize(file) as List<Store>;
-
-  //       return stores;
-  //   }
-
-
-  //   public void WriteToFile(List<Store> stores)
-  //   {
-  //     // file path
-  //     var path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/project_0.stores.xml";
-      
-  //     // open path
-  //     var file = new StreamWriter(path);
-      
-  //     // serialize object
-  //     var xml = new XmlSerializer(typeof(List<Store>));
-      
-  //     // write file
-  //     xml.Serialize(file, stores);
-     
-  //   }
-  // }
 }

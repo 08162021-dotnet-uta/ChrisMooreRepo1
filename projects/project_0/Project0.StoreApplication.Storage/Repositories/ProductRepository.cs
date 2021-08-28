@@ -19,8 +19,8 @@ namespace Project0.StoreApplication.Storage.Repositories
       {
         _fileAdapter.WriteToFile<Product>(_path, new List<Product>()
         {
-          new Product(){Name = "Computer"},
-          new Product(){Name = "Game"}
+          new Product(){Name = "Computer", Price = 479.00, Quantity = 10},
+          new Product(){Name = "Game", Price = 60.00, Quantity = 30}
 
         });
       }

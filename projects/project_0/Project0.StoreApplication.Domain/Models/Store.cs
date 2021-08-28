@@ -7,12 +7,12 @@ namespace Project0.StoreApplication.Domain.Models
     public string Name { get; set; }
     public List<Order> Orders { get; set; }
 
-    public Store()
-    {
-      Name = "GamerX";
-      Name = "TechX";
-      Name = "MooreX";
-    }
+    // public Store()
+    // {
+    //   Name = "GamerX";
+    //   Name = "TechX";
+    //   Name = "MooreX";
+    // }
 
     /// <summary>
     /// 
@@ -23,6 +23,4 @@ namespace Project0.StoreApplication.Domain.Models
       return Name;
     }
   }
-
-
 }

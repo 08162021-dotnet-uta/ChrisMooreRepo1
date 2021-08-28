@@ -13,17 +13,31 @@ namespace Project0.StoreApplication.Storage.Repositories
     private const string _path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/orders.xml";
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
 
+    public static List<Order> Orders = new List<Order>();
+
     public OrderRepository()
     {
       if (_fileAdapter.ReadFromFile<Order>(_path) == null)
       {
-        _fileAdapter.WriteToFile<Order>(_path, new List<Order>()
-        {
-          new Order(),
-          new Order()
-
-        });
+        _fileAdapter.WriteToFile<Order>(_path, new List<Order>());
       }
+      else
+      {
+        Orders = _fileAdapter.ReadFromFile<Order>(_path);
+      }
+    }
+
+    
+    public void AddOrder(Store store, Product p)
+    {
+      Orders.Add(new Order() {Store = store, Product = p});
+      _fileAdapter.WriteToFile<Order>(_path, Orders);
+      Orders = _fileAdapter.ReadFromFile<Order>(_path);
+    }
+
+    public List<Order> GetOrders()
+    {
+      return Orders;
     }
 
     /// <summary>

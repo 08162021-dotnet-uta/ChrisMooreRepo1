@@ -48,7 +48,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Selects the stores from file; Returns the stores.
     /// </summary>
     /// <returns></returns>
     public List<Store> Select()

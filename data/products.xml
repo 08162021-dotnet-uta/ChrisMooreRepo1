@@ -2,8 +2,12 @@
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
     <Name>Computer</Name>
+    <Price>479</Price>
+    <Quantity>10</Quantity>
   </Product>
   <Product>
     <Name>Game</Name>
+    <Price>60</Price>
+    <Quantity>30</Quantity>
   </Product>
 </ArrayOfProduct>
