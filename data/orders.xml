@@ -1,56 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Order>
+    <OrderID>0</OrderID>
     <Product>
+      <ProductID>0</ProductID>
       <Name>Game</Name>
       <Price>60</Price>
       <Quantity>30</Quantity>
     </Product>
     <Store>
+      <StoreID>0</StoreID>
       <Name>GamerX</Name>
       <Orders />
     </Store>
   </Order>
   <Order>
+    <OrderID>0</OrderID>
     <Product>
+      <ProductID>0</ProductID>
       <Name>Computer</Name>
       <Price>479</Price>
       <Quantity>10</Quantity>
     </Product>
     <Store>
+      <StoreID>0</StoreID>
       <Name>GamerX</Name>
       <Orders />
     </Store>
   </Order>
   <Order>
+    <OrderID>0</OrderID>
     <Product>
+      <ProductID>0</ProductID>
       <Name>Game</Name>
       <Price>60</Price>
       <Quantity>30</Quantity>
     </Product>
     <Store>
+      <StoreID>0</StoreID>
       <Name>TechX</Name>
       <Orders />
     </Store>
   </Order>
   <Order>
+    <OrderID>0</OrderID>
     <Product>
+      <ProductID>0</ProductID>
       <Name>Game</Name>
       <Price>60</Price>
       <Quantity>30</Quantity>
     </Product>
     <Store>
+      <StoreID>0</StoreID>
       <Name>TechX</Name>
       <Orders />
     </Store>
   </Order>
   <Order>
+    <OrderID>0</OrderID>
     <Product>
+      <ProductID>0</ProductID>
       <Name>Computer</Name>
       <Price>479</Price>
       <Quantity>10</Quantity>
     </Product>
     <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>TechX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
+      <Name>GamerX</Name>
+      <Orders />
+    </Store>
+  </Order>
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Computer</Name>
+      <Price>479</Price>
+      <Quantity>10</Quantity>
+    </Product>
+    <Store>
+      <StoreID>0</StoreID>
       <Name>GamerX</Name>
       <Orders />
     </Store>

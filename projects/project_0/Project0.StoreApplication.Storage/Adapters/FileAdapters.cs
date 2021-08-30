@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Project0.StoreApplication.Storage.Adapters
 {
   /// <summary>
-  /// The file adapter class to save and read data
+  /// The file adapter class to save and read data using generic methods to sort and manipulate List data.
   /// </summary>
   public class FileAdapter
   {
@@ -30,7 +30,7 @@ namespace Project0.StoreApplication.Storage.Adapters
     }
 
     /// <summary>
-    /// Writes to a file through path; Serializes the data in Xml file.
+    /// Writes to a file instantiated from given path; Serializes the type of of file into in Xml data file.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public void WriteToFile<T>(string path, List<T> data) where T : class

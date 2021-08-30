@@ -6,7 +6,7 @@ using Project0.StoreApplication.Storage.Adapters;
 namespace Project0.StoreApplication.Storage.Repositories
 {
   /// <summary>
-  /// 
+  /// Customer Repository class scope: 
   /// </summary>
   public class CustomerRepository : IRepository<Customer>
   {
@@ -19,8 +19,8 @@ namespace Project0.StoreApplication.Storage.Repositories
       {
         _fileAdapter.WriteToFile<Customer>(_path, new List<Customer>()
         {
-          new Customer(){Name = "Jack"},
-          new Customer(){Name = "Jeff"}
+          new Customer(){CustomerName = "Jack"},
+          new Customer(){CustomerName = "Jeff"}
 
         });
       }

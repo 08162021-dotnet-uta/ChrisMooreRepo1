@@ -4,8 +4,8 @@ namespace Project0.StoreApplication.Domain.Models
 {
   public class Customer
   {
-    public string CustomerId { get; set; }
-    public string Name { get; set; }
+    public byte CustomerId { get; set; }
+    public string CustomerName { get; set; }
     public List<Order> Orders { get; set; }
 
     // public Customer()
@@ -19,7 +19,7 @@ namespace Project0.StoreApplication.Domain.Models
     /// <returns></returns>
     public override string ToString()
     {
-      return Name;
+      return CustomerName;
       // return $"{Name} with {Orders.Count}";
     }
   }

@@ -12,7 +12,9 @@ namespace Project0.StoreApplication.Storage.Repositories
   {
     private const string _path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/products.xml";
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
-
+/// <summary>
+/// 
+/// </summary>
     public ProductRepository()
     {
       if (_fileAdapter.ReadFromFile<Product>(_path) == null)

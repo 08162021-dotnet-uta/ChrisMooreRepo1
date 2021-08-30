@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace Project0.StoreApplication.Domain.Interfaces
 {
   /// <summary>
-  /// 
+  /// Interface for repositories
   /// </summary>
   /// <typeparam name="T"></typeparam>
   public interface IRepository<T> where T : class

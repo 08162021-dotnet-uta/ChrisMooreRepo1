@@ -4,7 +4,11 @@ using Project0.StoreApplication.Domain.Models;
 using Project0.StoreApplication.Storage.Adapters;
 
 namespace Project0.StoreApplication.Storage.Repositories
-{    public class StoreRepository : IRepository<Store>
+{ 
+  /// <summary>
+  /// Store Repository 
+  /// </summary>   
+  public class StoreRepository : IRepository<Store>
   {
     private const string _path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/stores.xml";
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
@@ -14,21 +18,21 @@ namespace Project0.StoreApplication.Storage.Repositories
     /// </summary>
     public StoreRepository()
     {
+      // If statement: If there isn't a stores.xml file --> create new file, write list of stores, give stores avalue
        if (_fileAdapter.ReadFromFile<Store>(_path) == null)
       {
         _fileAdapter.WriteToFile<Store>(_path, new List<Store>()
         {
-
           new Store(){Name = "GamerX"},
           new Store(){Name = "TechX"},
           new Store(){Name = "MooreX"}
-
         });
       }
     }
+    
 
     /// <summary>
-    /// 
+    /// Delete is not used at this time
     /// </summary>
     /// <returns></returns>
     public bool Delete()
@@ -37,7 +41,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Insert is not used at this time
     /// </summary>
     /// <returns></returns>
     public bool Insert(List<Store> entry)
@@ -57,7 +61,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Update is not used at this time
     /// </summary>
     /// <returns></returns>
     public Store Update()

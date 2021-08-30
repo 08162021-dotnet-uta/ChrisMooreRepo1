@@ -33,7 +33,7 @@ namespace Project0.StoreApplication.Client.Singletons
     }
 
     /// <summary>
-    /// Private singleton constructor
+    /// Private singleton
     /// </summary>
     private CustomerSingleton()
     {

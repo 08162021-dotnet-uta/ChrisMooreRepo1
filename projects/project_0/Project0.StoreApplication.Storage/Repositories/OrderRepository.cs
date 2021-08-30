@@ -15,6 +15,9 @@ namespace Project0.StoreApplication.Storage.Repositories
 
     public static List<Order> Orders = new List<Order>();
 
+    /// <summary>
+    /// 
+    /// </summary>
     public OrderRepository()
     {
       if (_fileAdapter.ReadFromFile<Order>(_path) == null)
@@ -27,10 +30,14 @@ namespace Project0.StoreApplication.Storage.Repositories
       }
     }
 
-    
-    public void AddOrder(Store store, Product p)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="store"></param>
+    /// <param name="p"></param>
+    public void AddOrder(Store s, Product p)
     {
-      Orders.Add(new Order() {Store = store, Product = p});
+      Orders.Add(new Order() {Store = s, Product = p});
       _fileAdapter.WriteToFile<Order>(_path, Orders);
       Orders = _fileAdapter.ReadFromFile<Order>(_path);
     }
@@ -65,7 +72,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     // Reads from the file
 
     /// <summary>
-    /// Selects the list from file through path; Returns that file {customer.xml}
+    /// Selects the list from file through path; Returns that file {order.xml}
     /// </summary>
     /// <returns></returns>
     public List<Order> Select()

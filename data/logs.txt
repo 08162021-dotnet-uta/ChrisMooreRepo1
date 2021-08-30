@@ -205,3 +205,110 @@
 2021-08-28 15:39:06.383 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
 2021-08-28 15:39:11.019 -07:00 [INF] method: Capture() Generic collection
 2021-08-28 15:39:11.020 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:11:33.533 -07:00 [INF] method: Run()
+2021-08-29 13:11:37.801 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:11:37.802 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:11:45.827 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:11:45.828 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:12:21.595 -07:00 [INF] method: Run()
+2021-08-29 13:12:24.240 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:12:24.241 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:12:31.683 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:12:31.683 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:19:00.884 -07:00 [INF] method: Run()
+2021-08-29 13:19:08.021 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:19:08.022 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:21:25.079 -07:00 [INF] method: Run()
+2021-08-29 13:22:04.840 -07:00 [INF] method: Run()
+2021-08-29 13:22:07.716 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:22:07.718 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:23:50.152 -07:00 [INF] method: Run()
+2021-08-29 13:23:53.470 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:23:53.471 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:23:57.432 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:23:57.432 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:25:26.578 -07:00 [INF] method: Run()
+2021-08-29 13:25:28.824 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:25:28.825 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:25:31.705 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:25:31.705 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:27:01.879 -07:00 [INF] method: Run()
+2021-08-29 13:27:04.778 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:27:04.779 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:27:11.576 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:27:11.576 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:27:39.378 -07:00 [INF] method: Run()
+2021-08-29 13:27:41.397 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:27:41.398 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:27:43.599 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:27:43.599 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 13:28:17.128 -07:00 [INF] method: Run()
+2021-08-29 13:28:19.142 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:28:19.143 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 13:28:25.815 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 13:28:25.816 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 14:07:06.881 -07:00 [INF] method: Run()
+2021-08-29 14:07:09.536 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 14:07:09.537 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 14:07:12.376 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 14:07:12.376 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 14:21:34.260 -07:00 [INF] method: Run()
+2021-08-29 14:21:45.763 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 14:21:45.765 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 14:21:47.989 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 14:21:47.989 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 14:26:25.309 -07:00 [INF] method: Run()
+2021-08-29 21:00:34.761 -07:00 [INF] method: Run()
+2021-08-29 21:00:44.755 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 21:00:44.757 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:01:01.338 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 21:01:01.338 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:01:35.206 -07:00 [INF] method: Run()
+2021-08-29 21:01:37.790 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 21:01:37.791 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:05:32.649 -07:00 [INF] method: Capture() Generic collection
+2021-08-29 21:05:32.649 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:15:12.702 -07:00 [INF] method: Run()
+2021-08-29 21:15:18.441 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:15:18.441 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:15:21.311 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:15:21.311 -07:00 [INF] method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:17:27.218 -07:00 [INF] method: Run()
+2021-08-29 21:17:30.169 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:17:30.170 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:19:02.159 -07:00 [INF] method: Run()
+2021-08-29 21:19:04.273 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:19:04.274 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:20:41.669 -07:00 [INF] method: Run()
+2021-08-29 21:20:43.141 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:20:43.142 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:20:45.814 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:20:45.814 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:21:39.289 -07:00 [INF] method: Run()
+2021-08-29 21:21:41.714 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:21:41.715 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:21:43.191 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:21:43.191 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:23:10.029 -07:00 [INF] method: Run()
+2021-08-29 21:23:12.077 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:23:12.077 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:23:30.855 -07:00 [INF] method: Run()
+2021-08-29 21:23:32.923 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:23:32.923 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:23:35.804 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:23:35.804 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:24:29.004 -07:00 [INF] method: Run()
+2021-08-29 21:24:30.931 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:24:30.931 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:24:32.711 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:24:32.711 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:26:55.963 -07:00 [INF] method: Run()
+2021-08-29 21:26:58.119 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:26:58.119 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:27:00.637 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:27:00.637 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:27:42.654 -07:00 [INF] method: Run()
+2021-08-29 21:27:44.981 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:27:44.982 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Store>()
+2021-08-29 21:27:46.260 -07:00 [INF] Select Method: Generic<Project0.StoreApplication.Domain.Models.Product>()
+2021-08-29 21:27:46.261 -07:00 [INF] Print Method: Output of Generic<Project0.StoreApplication.Domain.Models.Product>()
