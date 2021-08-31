@@ -10,9 +10,12 @@ namespace Project0.StoreApplication.Client.Singletons
   /// </summary>
   public class StoreSingleton
   {
+    // Instance of store singleton
     private static StoreSingleton _storeSingleton;
+    // Creation of store repoistory
     private static StoreRepository _storeRepository = new StoreRepository();
 
+    // List of stores used by _storesingleton
     public List<Store> Stores { get;}
     public static StoreSingleton Instance
     {

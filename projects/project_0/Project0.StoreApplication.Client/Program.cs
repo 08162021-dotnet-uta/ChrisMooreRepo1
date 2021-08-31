@@ -4,7 +4,7 @@
   {
     private static void Main(string[] args)
     {
-      StoreApplication.StoreRun();
+      StoreApplication StoreApp = new StoreApplication();
     }
   }
 }

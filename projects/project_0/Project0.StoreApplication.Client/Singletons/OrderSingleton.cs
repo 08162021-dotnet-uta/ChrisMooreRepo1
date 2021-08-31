@@ -5,7 +5,7 @@ using Project0.StoreApplication.Storage.Repositories;
 namespace Project0.StoreApplication.Client.Singletons
 {
   /// <summary>
-  /// 
+  /// OrderSingleton class 
   /// </summary>
   public class OrderSingleton
   {
@@ -33,11 +33,11 @@ namespace Project0.StoreApplication.Client.Singletons
     }
 
     /// <summary>
-    /// Private singleton constructor
+    /// Private order singleton constructor, 
     /// </summary>
     private OrderSingleton()
     {
-      // Uses a private contructor to instantiate the customer repo to call the read for the customer path
+      // Uses a private contructor to instantiate the order repo to call the read for the order path
       _orderRepository.Select();
     }
 

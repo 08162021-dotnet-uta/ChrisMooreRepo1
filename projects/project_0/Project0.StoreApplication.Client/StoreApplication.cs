@@ -3,6 +3,7 @@ using Serilog;
 using Project0.StoreApplication.Domain.Models;
 using Project0.StoreApplication.Client.Singletons;
 using System.Collections.Generic;
+using Project0.StoreApplication.Storage.Adapters;
 
 namespace Project0.StoreApplication.Client
 {
@@ -12,13 +13,20 @@ namespace Project0.StoreApplication.Client
     private static readonly StoreSingleton _storeSingleton = StoreSingleton.Instance;
     private static readonly ProductSingleton _productSingleton = ProductSingleton.Instance;
     private static OrderSingleton _orderSingleton = OrderSingleton.Instance;
-    //private const string _logFilePath = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/logs.txt";
-    
-    public static void StoreRun()
-    {
-      // Log.Logger = new LoggerConfiguration().WriteTo.File(_logFilePath).CreateLogger();
 
-      // Log.Information("method: Run()");
+    // This is static so it can be available for the lifetime of the code and instantiated at compile time
+    private static string genericPath = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/";
+    private static readonly FileAdapter _fileAdapter = new FileAdapter();
+    private const string _logFilePath = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/logs.txt";
+    
+    /// <summary>
+    /// Creates a constructor with the instructions for the StoreApplication
+    /// </summary>
+    public StoreApplication()
+    {
+      Log.Logger = new LoggerConfiguration().WriteTo.File(_logFilePath).CreateLogger();
+
+      Log.Information("method: StoreAppRun()");
       
       Console.WriteLine("Welcome Valued Customer!");
       Console.Write("Would you like to see all previous purchases? ");
@@ -26,24 +34,34 @@ namespace Project0.StoreApplication.Client
       {
          PrintAllOrder();
       }
-      Console.WriteLine("\nPlease select a local Store: ");
-      var Store = _storeSingleton.Stores[Select<Store>(_storeSingleton.Stores)];
-      Console.WriteLine("The Selected Store is: {0}", Store);
+      Console.WriteLine("\nPlease select a Store Location: ");
+      var currentStore = _storeSingleton.Stores[Select<Store>(_storeSingleton.Stores)];
+      Console.WriteLine("The Selected Store is: {0}", currentStore);
+      Console.Write("Would you like to see all purchases from {0}?", currentStore);
+      if (Confirm())
+      {
+        Print(GetOrderFromStore(currentStore));
+      }
 
       Console.WriteLine("\nPlease select a Product: ");
-      var Product = _productSingleton.Products[Select<Product>(_productSingleton.Products)];
-      Console.WriteLine("The selected product {0} is now in cart", Product);
+      var currentProduct = _productSingleton.Products[Select<Product>(_productSingleton.Products)];
+      Console.WriteLine("The selected product {0} is now in cart", currentProduct);
 
       // var customer = _customerSingleton.Customers[Select<Customer>(_customerSingleton.Customers)];
       Console.Write("\nWould you like to confirm your purchase? ");
       if(Confirm())
       {
-        _orderSingleton.AddToOrderRepository(Store, Product);
+        Order curOrder = new Order() {Store = currentStore, Product = currentProduct};
+        _orderSingleton.AddToOrderRepository(currentStore, currentProduct);
+        AddOrderToStore(currentStore, curOrder);
       }
     }
 
-
-  private static void PrintAllOrder()
+    //This is one of the methods Blake showed me how to create in order to 
+  /// <summary>
+  /// 
+  /// </summary>
+    private static void PrintAllOrder()
     {
       int count = 0;
       foreach(var order in _orderSingleton.getRepo().GetOrders())
@@ -52,6 +70,10 @@ namespace Project0.StoreApplication.Client
       }
     }
 
+    /// <summary>
+    /// Uses a confirm message to confirm purchases/stores
+    /// </summary>
+    /// <returns></returns>
     static bool Confirm()
     {
       Console.WriteLine("(Y/N)");
@@ -63,7 +85,7 @@ namespace Project0.StoreApplication.Client
     }
 
     /// <summary>
-    /// 
+    /// Uses a print method to pass list data 
     /// </summary>
     private static void Print<T>(List<T> data) where T : class
     {
@@ -78,7 +100,7 @@ namespace Project0.StoreApplication.Client
     }
 
     /// <summary>
-    /// 
+    /// Uses a select method to select a List 
     /// </summary>
     /// <returns></returns>
     private static int Select<T>(List<T> data) where T : class
@@ -91,6 +113,39 @@ namespace Project0.StoreApplication.Client
 
       return selected - 1;
     }
+    /// <summary>
+    /// The first parameter is a Store object, The second parameter is an Order Object
+    /// </summary>
+    /// <param name="s"></param>
+    /// <param name="o"></param>
+    static void AddOrderToStore(Store s, Order o)
+    {
+      // Stores the path into a string variable 
+      string ThePath = genericPath + s.Location + ".xml";
+      // Create the variable from the orders list
+      List<Order> tempOrders;
 
+      if (_fileAdapter.ReadFromFile<Order>(ThePath) == null)
+      {
+        _fileAdapter.WriteToFile<Order>(ThePath, new List<Order>());
+      }
+      else 
+      {
+        tempOrders = _fileAdapter.ReadFromFile<Order>(ThePath);
+        tempOrders.Add(o);
+        _fileAdapter.WriteToFile<Order>(ThePath, tempOrders);
+      }
+    }
+    /// <summary>
+      /// Will return a list of orders, the parameter given is a Store
+      /// 
+      /// </summary>
+      /// <param name="s"></param>
+      /// <returns></returns>
+    static List<Order> GetOrderFromStore(Store s)
+      {
+        string ThePath = genericPath + s.Location + ".xml";
+        return _fileAdapter.ReadFromFile<Order>(ThePath);      
+      }
   }
 }
