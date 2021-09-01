@@ -4,6 +4,7 @@ using Project0.StoreApplication.Domain.Models;
 using Project0.StoreApplication.Client.Singletons;
 using System.Collections.Generic;
 using Project0.StoreApplication.Storage.Adapters;
+using Project0.StoreApplication.Storage;
 
 namespace Project0.StoreApplication.Client
 {
@@ -24,16 +25,18 @@ namespace Project0.StoreApplication.Client
     /// </summary>
     public StoreApplication()
     {
+      //Uses Serilog to instationate a write to file for logging in the application.
       Log.Logger = new LoggerConfiguration().WriteTo.File(_logFilePath).CreateLogger();
 
       Log.Information("method: StoreAppRun()");
-      
-      Console.WriteLine("Welcome Valued Customer!");
-      Console.Write("Would you like to see all previous purchases? ");
+      //Prompt for opening application
+      Console.WriteLine("Welcome to the Store Application are most valued Customer!");
+      Console.Write("Would you like to preview past purchases before continuing?");
       if (Confirm())
       {
-         PrintAllOrder();
+      PrintAllOrder();
       }
+      //Prompt for store location
       Console.WriteLine("\nPlease select a Store Location: ");
       var currentStore = _storeSingleton.Stores[Select<Store>(_storeSingleton.Stores)];
       Console.WriteLine("The Selected Store is: {0}", currentStore);
@@ -43,6 +46,7 @@ namespace Project0.StoreApplication.Client
         Print(GetOrderFromStore(currentStore));
       }
 
+      //Prompts to select a product
       Console.WriteLine("\nPlease select a Product: ");
       var currentProduct = _productSingleton.Products[Select<Product>(_productSingleton.Products)];
       Console.WriteLine("The selected product {0} is now in cart", currentProduct);
@@ -55,11 +59,13 @@ namespace Project0.StoreApplication.Client
         _orderSingleton.AddToOrderRepository(currentStore, currentProduct);
         AddOrderToStore(currentStore, curOrder);
       }
+      Console.WriteLine("Thank you for shopping on the Store Application.");
+      Console.Write("Have a great day! ");
     }
 
     //This is one of the methods Blake showed me how to create in order to 
   /// <summary>
-  /// 
+  /// For every order called from past orders, print those past orders and increment their count by 1.
   /// </summary>
     private static void PrintAllOrder()
     {
@@ -71,12 +77,14 @@ namespace Project0.StoreApplication.Client
     }
 
     /// <summary>
-    /// Uses a confirm message to confirm purchases/stores
+    /// Uses a confirm message for returning products/orders/stores
     /// </summary>
     /// <returns></returns>
     static bool Confirm()
     {
+      //Prompts for a yes or no, denoted by 'Y' and 'N' respectively.
       Console.WriteLine("(Y/N)");
+      //If the condition is met return the method or object called.
       if (Console.ReadLine() == "Y")
       {
         return true;
@@ -147,5 +155,15 @@ namespace Project0.StoreApplication.Client
         string ThePath = genericPath + s.Location + ".xml";
         return _fileAdapter.ReadFromFile<Order>(ThePath);      
       }
+    
+    // public static void DBdemo()
+    // {
+    //   var db = new DBdemo();
+    //   db.GetCustomers();
+    //   foreach (var item in db.GetCustomers())
+    //   {
+    //     Console.WriteLine(item);
+    //   }
+    // }
   }
 }
