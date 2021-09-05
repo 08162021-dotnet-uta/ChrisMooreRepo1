@@ -15,9 +15,20 @@ namespace Project0.StoreApplication.Client
     private static readonly ProductSingleton _productSingleton = ProductSingleton.Instance;
     private static OrderSingleton _orderSingleton = OrderSingleton.Instance;
 
-    // This is static so it can be available for the lifetime of the code and instantiated at compile time
+    /// <summary>
+    /// This path is static so it can be available for the lifetime of the code and instantiated at compile time
+    /// </summary>
     private static string genericPath = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/";
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
+
+    /// <summary>
+    /// This path is created for logging information 
+    /// </summary>
     private const string _logFilePath = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/logs.txt";
     
     /// <summary>
@@ -63,7 +74,7 @@ namespace Project0.StoreApplication.Client
       Console.Write("Have a great day! ");
     }
 
-    //This is one of the methods Blake showed me how to create in order to 
+    //I recieved help on outputting orders to this method so that past purchases can be previewed before shopping
   /// <summary>
   /// For every order called from past orders, print those past orders and increment their count by 1.
   /// </summary>
@@ -108,7 +119,7 @@ namespace Project0.StoreApplication.Client
     }
 
     /// <summary>
-    /// Uses a select method to select a List 
+    /// Uses a select method to select a List from print, return user index - 1 
     /// </summary>
     /// <returns></returns>
     private static int Select<T>(List<T> data) where T : class
@@ -144,9 +155,8 @@ namespace Project0.StoreApplication.Client
         _fileAdapter.WriteToFile<Order>(ThePath, tempOrders);
       }
     }
-    /// <summary>
-      /// Will return a list of orders, the parameter given is a Store
-      /// 
+      /// <summary>
+      /// Will return a list of orders from the path variable, the parameter given is a Store
       /// </summary>
       /// <param name="s"></param>
       /// <returns></returns>

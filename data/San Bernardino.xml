@@ -17,32 +17,6 @@
     <OrderID>0</OrderID>
     <Product>
       <ProductID>0</ProductID>
-      <Name>Game</Name>
-      <Price>60</Price>
-      <Quantity>30</Quantity>
-    </Product>
-    <Store>
-      <StoreId>0</StoreId>
-      <Location>Barstow</Location>
-    </Store>
-  </Order>
-  <Order>
-    <OrderID>0</OrderID>
-    <Product>
-      <ProductID>0</ProductID>
-      <Name>Game</Name>
-      <Price>60</Price>
-      <Quantity>30</Quantity>
-    </Product>
-    <Store>
-      <StoreId>0</StoreId>
-      <Location>Victorville</Location>
-    </Store>
-  </Order>
-  <Order>
-    <OrderID>0</OrderID>
-    <Product>
-      <ProductID>0</ProductID>
       <Name>Computer</Name>
       <Price>479</Price>
       <Quantity>10</Quantity>
@@ -115,19 +89,6 @@
     <Store>
       <StoreId>0</StoreId>
       <Location>San Bernardino</Location>
-    </Store>
-  </Order>
-  <Order>
-    <OrderID>0</OrderID>
-    <Product>
-      <ProductID>0</ProductID>
-      <Name>Computer</Name>
-      <Price>479</Price>
-      <Quantity>10</Quantity>
-    </Product>
-    <Store>
-      <StoreId>0</StoreId>
-      <Location>Barstow</Location>
     </Store>
   </Order>
 </ArrayOfOrder>

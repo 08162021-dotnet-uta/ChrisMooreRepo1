@@ -6,14 +6,14 @@ using Project0.StoreApplication.Storage.Adapters;
 namespace Project0.StoreApplication.Storage.Repositories
 {
   /// <summary>
-  /// 
+  /// This class holds the product repository path, product constructor, and inherits the IRepository interface
   /// </summary>
   public class ProductRepository : IRepository<Product>
   {
     private const string _path = @"/home/chris/revature/myRepos/ChrisMooreRepo1/data/products.xml";
     private static readonly FileAdapter _fileAdapter = new FileAdapter();
 /// <summary>
-/// 
+/// Checks if the path containing the product list is created, if not creates one by writing products to the path
 /// </summary>
     public ProductRepository()
     {
@@ -29,7 +29,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Method not used for Product
     /// </summary>
     /// <returns></returns>
     public bool Delete()
@@ -49,11 +49,9 @@ namespace Project0.StoreApplication.Storage.Repositories
       return true;
     }
 
-    // Implements Interface - to select the list from the file
-    // Reads from the file
-
     /// <summary>
-    /// Selects the list from file through path; Returns that file {customer.xml}
+    /// Implements Interface - to select the list from the file.
+    /// Selects the list from file through path; Returns that file {product.xml}
     /// </summary>
     /// <returns></returns>
     public List<Product> Select()
@@ -62,7 +60,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Method not used for product
     /// </summary>
     /// <returns></returns>
     public Product Update()

@@ -30,16 +30,15 @@ namespace Project0.StoreApplication.Client.Singletons
 
         return _productSingleton;
       }
-    }
+    }//EoPS check
 
     /// <summary>
-    /// 
+    /// Uses a private contructor to instantiate the product repository to call the read for the product path
     /// </summary>
     private ProductSingleton()
     {
-      // Uses a private contructor to instantiate the customer repo to call the read for the customer path
       Products = _productRepository.Select();
     }
 
-  }
-}
+  }//EoC
+}//EoN

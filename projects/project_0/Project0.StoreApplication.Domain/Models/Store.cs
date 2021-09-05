@@ -4,9 +4,9 @@ namespace Project0.StoreApplication.Domain.Models
 {
   public class Store
   {
-    public byte StoreID {get; set;}
-    public string Name { get; set; }
-    public List<Order> Orders { get; set; }
+    public byte StoreId;
+    public string Location { get; set; }
+    // public List<Order> Orders { get; set; }
 
     /// <summary>
     /// 
@@ -14,7 +14,7 @@ namespace Project0.StoreApplication.Domain.Models
     /// <returns></returns>
     public override string ToString()
     {
-      return Name;
+      return Location;
     }
   }
 }

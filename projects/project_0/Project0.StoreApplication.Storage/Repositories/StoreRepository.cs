@@ -6,7 +6,7 @@ using Project0.StoreApplication.Storage.Adapters;
 namespace Project0.StoreApplication.Storage.Repositories
 { 
   /// <summary>
-  /// Store Repository 
+  /// Store Repository holds the store.xml path, Store Repository constructor with locations, and insert method for list of stores
   /// </summary>   
   public class StoreRepository : IRepository<Store>
   {
@@ -23,9 +23,9 @@ namespace Project0.StoreApplication.Storage.Repositories
       {
         _fileAdapter.WriteToFile<Store>(_path, new List<Store>()
         {
-          new Store(){Name = "GamerX"},
-          new Store(){Name = "TechX"},
-          new Store(){Name = "MooreX"}
+          new Store(){Location = "Phelan"},
+          new Store(){Location = "Barstow"},
+          new Store(){Location = "Victorville"}
         });
       }
     }

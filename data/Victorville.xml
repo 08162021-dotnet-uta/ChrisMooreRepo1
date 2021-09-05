@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <OrderID>0</OrderID>
+    <Product>
+      <ProductID>0</ProductID>
+      <Name>Game</Name>
+      <Price>60</Price>
+      <Quantity>30</Quantity>
+    </Product>
+    <Store>
+      <Location>Victorville</Location>
+    </Store>
+  </Order>
+</ArrayOfOrder>

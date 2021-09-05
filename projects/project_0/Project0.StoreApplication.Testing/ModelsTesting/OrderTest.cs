@@ -12,6 +12,8 @@ namespace Project0.StoreApplication.Testing.ModelsTesting
 
       // // act = execute sut for data
       var actual = sut.ToString();
+
+      Assert.NotNull(sut);
     }
   }
 }

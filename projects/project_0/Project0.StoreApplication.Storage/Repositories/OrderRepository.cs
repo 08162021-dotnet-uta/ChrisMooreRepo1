@@ -16,7 +16,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     public static List<Order> Orders = new List<Order>();
 
     /// <summary>
-    /// 
+    /// Checks if the path containing the order list is created, if not creates one, else instantiates order variable with the path 
     /// </summary>
     public OrderRepository()
     {
@@ -31,7 +31,7 @@ namespace Project0.StoreApplication.Storage.Repositories
     }
 
     /// <summary>
-    /// 
+    /// Creates a method with two parameters 
     /// </summary>
     /// <param name="store"></param>
     /// <param name="p"></param>
@@ -42,6 +42,10 @@ namespace Project0.StoreApplication.Storage.Repositories
       Orders = _fileAdapter.ReadFromFile<Order>(_path);
     }
 
+    /// <summary>
+    /// This method returns a list of Orders
+    /// </summary>
+    /// <returns></returns>
     public List<Order> GetOrders()
     {
       return Orders;

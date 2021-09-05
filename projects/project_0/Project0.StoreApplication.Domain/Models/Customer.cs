@@ -5,13 +5,14 @@ namespace Project0.StoreApplication.Domain.Models
   public class Customer
   {
     public byte CustomerId { get; set; }
-    public string CustomerName { get; set; }
+    public string Name { get; set; }
     public List<Order> Orders { get; set; }
 
-    // public Customer()
-    // {
+    public Customer()
+    {
+      Name = "It Wednesday";
 
-    // }
+    }
 
     /// <summary>
     /// 
@@ -19,7 +20,7 @@ namespace Project0.StoreApplication.Domain.Models
     /// <returns></returns>
     public override string ToString()
     {
-      return CustomerName;
+      return Name;
       // return $"{Name} with {Orders.Count}";
     }
   }
