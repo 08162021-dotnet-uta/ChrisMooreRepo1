@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using StoreAppDBContext.Models;
+using cus = StoreAppDBContext.Models.Customer;
 
 namespace DemoStoreAppDB
 {
@@ -6,13 +11,38 @@ namespace DemoStoreAppDB
     {
         static void Main(string[] args)
         {
-           Customer c1 = new Customer();
-           c1.Fname = "Chrisssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss";
-           c1.Lname = "Joseph";
+           
 
-           Customer c2 = new Customer("Chris","Moore");
+            Console.WriteLine("Hello, please enter your name: ");
+            Console.ReadLine();
+            // Creates a scope for the using statement
+            using (DemoStoreAppDBContext context = new DemoStoreAppDBContext())
+            {
+                // List<Customer> customers = context.Customers.FromSqlRaw<Customer>("SELECT * FROM Customers").ToList();
 
-           Console.WriteLine($"The names are {c1.Fname} {c1.Lname}, {c2.Fname} {c2.Lname}");
+                var customers = context.Customers.FromSqlRaw("Select * From Customers").ToList();
+
+                foreach(var v in customers)
+                {
+                    Console.WriteLine($"{ v.FirstName} { v.LastName}");
+                }
+
+                cus c3 = new cus();
+                c3.FirstName = "Gordon";
+                c3.LastName = "Heth";
+
+                context.Add(c3);
+                context.SaveChanges();
+
+                //var ncus = context.Customers.FromSqlRaw("Select * From Customers Where FirstName = 'Gordon'").FirstOrDefault();
+
+                //if("Gordon" != null)
+                //{
+                    //Console.WriteLine($"The new customer is {ncus.FirstName} {ncus.LastName}");
+
+                //}
+
+            }
         }
     }
 }

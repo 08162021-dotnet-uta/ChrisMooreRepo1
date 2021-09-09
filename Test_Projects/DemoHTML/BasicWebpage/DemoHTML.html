@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--This is a HTML5 document type declaration-->
+
+<!--HTML is not a programming language, 
+    but is a markup language that defines the structure of a webpage
+    it consists of elements such as <p>element</p> that enclose content by 
+    tags for a webpage to appear and/or act a specific way
+  -->
+
+<!--<html> <-- this element wraps all the content on the page. Known as the root element.-->
+<html lang="en">
+<!--<head> <-- this element is a container for (undisplayed) metadata (i.e. data about data)
+    A webpages metadat consists of both <title> and <meta> descriptions
+-->
+
+<head>
+  <!--the <meta> element provides search engines with information about content and purpose of webpages
+    Meta is use for Search Engine Optimization(SEO).
+-->
+  <meta charset="UTF-8">
+  <!--The meta element below switches off microsoft edge old internet explorer(IE) compatibility
+    issues.
+  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--the meta element below controls how a browser displays the page-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--the title element specifies the document tile-->
+  <title>DemoHTML</title>
+  <link rel="stylesheet" type="tex/css" href="DemoCSS.css">
+</head>
+
+<!--<body> contains all the content that you want to show web users. 
+    (text, images, videos, games, etc) 
+-->
+
+<body>
+
+  <!--What the <img> tag is providing a source to the image,
+      The alt gives a name if image doesn't show,
+      and height and width size the image
+  -->
+  <img src="Raven.jpg" alt="Raven" height="100px" width="100px">
+  <!--Below is an element with <p> paragraph tags </p> enclosing the text contents-->
+  <p>Hello this is the first paragraph element</p>
+  <!--A span is an inline element used to group inline elements in documents
+      * Does not provide it's own styling
+      * CSS can use the class or id of a span
+  -->
+  <p>This is a span that has the<span style="color:red"> color red </span>style</p>
+  <!--Div provides a block level element that defines a division or section of an html document
+      * Often used as a container for other HTML elements to style with CSS
+      * Alsoused to perform tasks with Javascript
+  -->
+  <div>
+    <!--The heading element used with the the tags below give heading for various sizes--><br>
+    <h1 style="color:green">We are given our first heading! Aye</h1>
+    <h2>We are given our second heading! Aye Aye..</h2>
+    <h3>We are given our third but not last heading! Ayyyee</h3><br>
+
+    <p>this is <b>Bold</b> text, and this is <strong>Strong</strong> text!</p>
+    <p>this is <i>Italic</i> text, and this is<em> Emphasized</em> text!</p>
+    <p>this is <mark>Marked</mark> text</p>
+    <p>this is <small>small</small> text</p>
+    <p>this is <del>deleted</del> text, and this is <ins>inserted</ins> text</p>
+    <p>this is a<sub><b>subscript</b></sub> of text, and this is a<sup><b>superscript</b></sup> of text</p><br>
+
+    <table border="1">
+      <!--table element with applied border style-->
+      <thead>
+        <th>Header1</th>
+        <!--This is a table header cell-->
+        <th>Header2</th>
+      </thead>
+      <tbody>
+        <!--This is a table body-->
+        <tr>
+          <td>1st under H1</td>
+          <!--table data cell-->
+          <td>1st under H2</td>
+        </tr>
+        <!--table row cell-->
+        <tr>
+          <td>2nd under H1</td>
+          <td>2nd under H2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <!--specifies the form element-->
+      This is an unordered list with input
+      <ul>
+        <!--specifies the unordered list element-->
+        <li>
+          <!--specifies the list element-->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+        </li>
+        <li>
+          <label for="password">Password:</label>
+          <input type="text" id="password" name="password">
+        </li>
+      </ul>
+      This is an ordered list with input
+      <ol>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+        </li>
+      </ol>
+      <!--This is a text area-->
+      <textarea id="name" name="user_message"></textarea>
+    </form>
+
+  </div>
+  <!--references the source using the script tage and source -->
+  <script src='DemoJS.js'></script>
+</body>
+
+</html>
+
+<!--Notes for HTML:
+    Elemements can be formmated inline, and have styles manually applied via style attribute
+    Attributes are modifiers place inside the opening tag of an element.
+    * It is a key-value pair
+    * Some HTML tags of specific attributes
+    * The four main attributes are: id, class, style, and title
+    * > id - provides a document wide unique id for an element
+    * > class - provides a way of classifying like elements, is not unique, 
+        and can be shared among other elements,
+    * > style - adds styling directly to an element
+    * > title - used to attach subtextual explanation to an element
+        Which is a text popup when hovering over something like a tab.
+    Elements:
+    <a></a> - provides an anchor tag to link to a webpage
+    <ul</ul> - is an un ordered list tag that will display bullet points
+    <li></li> - just a list tag used in ul and ol lists
+    <ol></ol> - ordered list tag that displays a numbered list
+    Forms: Allows users to enter data
+      * Data is sent to the web server for processing or client side use to update the interface
+      * A forms HTML is made up of 1 or more form controls, some elements give a form structure
+      *
+-->
+
+<!--Notes for CSS:
+    Cascading Style Sheets(CSS) is a language that describes the style that the browser will give
+    HTML elements on screen.
+    CSS rulesets are stored in a .css file called a style sheet.
+    Internal CSS: applied inside the the <style> element inside <head> section
+    Inline CSS:
+      * Used to apply unique style to a single element
+      * Uses style attribute inside an elements opening tag
+    Syntax
+    * The selector points to the HTML element that you want to style
+    * Its declaration block is bounded by curly braces {} that contains declarations seperated by a semi-colon;
+    * Each declaration includes a CSS property name and value seperated by a colon.
+    Pseudo-Selectors
+    There are two type of Pseudo-Selectors - Class and Element.
+    * Class Selectors - are used to define a special state of an element
+    * > This can be to display a visited link or have an elements color change when hovering with the mouse pointer
+    * Element Selector - is used to style specified parts of an element
+    * > THis can be liek the first letter or lien of an element
+    A pseudo-class is a keyword at the end of a CSS selector that is used to specify a style for
+    the selected element in a certain state: ex. Mouse hovering or checked checkbox
+
+-->
