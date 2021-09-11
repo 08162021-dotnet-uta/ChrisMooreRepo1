@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using StoreAppDBContext.Models;
-using cus = StoreAppDBContext.Models.Customer;
 
 namespace DemoStoreAppDB
 {
@@ -11,38 +10,46 @@ namespace DemoStoreAppDB
     {
         static void Main(string[] args)
         {
+            /*
+                Task1: Get a database to print orders with details such as product
+                       Get a database to print customer orders with content
+                       Get a database to print store orders with content
+                Task2: 
+             
+            */
            
 
-            Console.WriteLine("Hello, please enter your name: ");
-            Console.ReadLine();
-            // Creates a scope for the using statement
-            using (DemoStoreAppDBContext context = new DemoStoreAppDBContext())
+            
+             // Creates a scope for the using statement
+            using (DemoStoreAppDBContext customercontext = new DemoStoreAppDBContext())
             {
-                // List<Customer> customers = context.Customers.FromSqlRaw<Customer>("SELECT * FROM Customers").ToList();
-
-                var customers = context.Customers.FromSqlRaw("Select * From Customers").ToList();
-
-                foreach(var v in customers)
+                var customers = customercontext.Customers.FromSqlRaw("Select * From Customers").ToList();
+                int count = 0;
+                foreach (var v in customers)
                 {
-                    Console.WriteLine($"{ v.FirstName} { v.LastName}");
+                   Console.WriteLine($"{++count} - { v.FirstName} { v.LastName}");
+
                 }
 
-                cus c3 = new cus();
-                c3.FirstName = "Gordon";
-                c3.LastName = "Heth";
 
-                context.Add(c3);
-                context.SaveChanges();
+
+                #region
+                //cus c3 = new cus();
+                //c3.FirstName = "Gordon";
+                //c3.LastName = "Heth";
+
+                //context.Add(c3);
+                //context.SaveChanges();
 
                 //var ncus = context.Customers.FromSqlRaw("Select * From Customers Where FirstName = 'Gordon'").FirstOrDefault();
 
                 //if("Gordon" != null)
                 //{
-                    //Console.WriteLine($"The new customer is {ncus.FirstName} {ncus.LastName}");
+                //Console.WriteLine($"The new customer is {ncus.FirstName} {ncus.LastName}");
 
                 //}
-
-            }
-        }
-    }
-}
+                #endregion
+            }//EoUsing
+        }//EoM
+    }//EoC
+}//EoN
