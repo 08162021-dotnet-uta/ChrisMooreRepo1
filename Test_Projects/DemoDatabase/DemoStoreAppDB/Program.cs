@@ -28,8 +28,13 @@ namespace DemoStoreAppDB
                 foreach (var v in customers)
                 {
                    Console.WriteLine($"{++count} - { v.FirstName} { v.LastName}");
-
                 }
+
+                //Customer cus = new Customer();
+
+                //Console.WriteLine("\nPlease enter your name: ");
+
+
 
 
 
