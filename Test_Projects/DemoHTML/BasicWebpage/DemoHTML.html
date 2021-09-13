@@ -7,13 +7,15 @@
     tags for a webpage to appear and/or act a specific way
   -->
 
-<!--<html> <-- this element wraps all the content on the page. Known as the root element.-->
 <html lang="en">
-<!--<head> <-- this element is a container for (undisplayed) metadata (i.e. data about data)
-    A webpages metadat consists of both <title> and <meta> descriptions
--->
+<!--<html> <-- this element wraps all the content on the page. Known as the root element.-->
 
 <head>
+  <!--<head> <-- this element is a container for (undisplayed) metadata (i.e. data about data)
+    A webpages metadata consists of both <title> and <meta> descriptions
+-->
+
+
   <!--the <meta> element provides search engines with information about content and purpose of webpages
     Meta is use for Search Engine Optimization(SEO).
 -->
@@ -24,9 +26,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--the meta element below controls how a browser displays the page-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--the title element specifies the document tile-->
+  <!--the title element specifies the document title-->
   <title>DemoHTML</title>
-  <link rel="stylesheet" type="tex/css" href="DemoCSS.css">
+  <link rel="stylesheet" type="text/css" href="DemoCSS.css">
 </head>
 
 <!--<body> contains all the content that you want to show web users. 
@@ -49,7 +51,7 @@
   <p>This is a span that has the<span style="color:red"> color red </span>style</p>
   <!--Div provides a block level element that defines a division or section of an html document
       * Often used as a container for other HTML elements to style with CSS
-      * Alsoused to perform tasks with Javascript
+      * Also used to perform tasks with Javascript
   -->
   <div>
     <!--The heading element used with the the tags below give heading for various sizes--><br>
@@ -113,14 +115,14 @@
     </form>
 
   </div>
-  <!--references the source using the script tage and source -->
+  <!--references the source using the script tag and source -->
   <script src='DemoJS.js'></script>
 </body>
 
 </html>
 
 <!--Notes for HTML:
-    Elemements can be formmated inline, and have styles manually applied via style attribute
+    Elements can be formmated inline, and have styles manually applied via style attribute
     Attributes are modifiers place inside the opening tag of an element.
     * It is a key-value pair
     * Some HTML tags of specific attributes
@@ -146,7 +148,7 @@
     Cascading Style Sheets(CSS) is a language that describes the style that the browser will give
     HTML elements on screen.
     CSS rulesets are stored in a .css file called a style sheet.
-    Internal CSS: applied inside the the <style> element inside <head> section
+    Internal CSS: applied inside the <style> element inside <head> section of the HTML document
     Inline CSS:
       * Used to apply unique style to a single element
       * Uses style attribute inside an elements opening tag
@@ -159,8 +161,55 @@
     * Class Selectors - are used to define a special state of an element
     * > This can be to display a visited link or have an elements color change when hovering with the mouse pointer
     * Element Selector - is used to style specified parts of an element
-    * > THis can be liek the first letter or lien of an element
+    * > THis can be like the first letter or line of an element
     A pseudo-class is a keyword at the end of a CSS selector that is used to specify a style for
     the selected element in a certain state: ex. Mouse hovering or checked checkbox
+
+-->
+
+<!--Notes for Javascript:
+  
+  JavaScript (JS) programming language conforms to the ECMAScript specification.
+  JavaScript is a high-level language that is just-in-time compiled, has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+
+  Primitives:
+  A primitive (primitive value, primitive data type) in javascript is data that is not an object.
+  * There are 7 primitive data types in Javascript: string, number, bigint, boolean, undefined, symbol, and null
+  * Primitives are passed by value in JS vs Objects which are passed by reference.
+  * All primitives are immutable, i.e., they cannot be change/altered.
+  * A variable assigned a primitive value maybe reassigned a new value, but the existing primitive value cannot be changed.
+  * If a functions’ local variable has the same name as a variable outside the function, the local variable shadows the outer variable.
+
+  Key takeaway: a primitive can be replaced, but not directly altered
+
+  JSON:
+  JSON(javascript Object Notation) - is used for data exchange.
+  Two methods of JSON are: 
+  * JSON.stringify() which converts objects into JSON. (note: The JSON string is called JSON-encoded/serialized/or stirngified object)
+  * JSON.parse() convert JSON back into an object. (note: parse decodes a json string)
+
+  Functions:
+  A function can return a value at any point using return;.It can also return; without a value.
+  Never place return data on a separate line. JS assumes a ; after the keyword return.
+  In JavaScript, a function is considered a value.
+  A Function Expression is created when program execution reaches its declaration. It is usable only from that moment onward.
+  The lambda operator is used with a function accepting no args or multiple with the right side evaluating the expression then returnign the result
+  An Immediately Invoked Function Expression (IIFE, pronounced “iffy”) is a JavaScript function that runs as soon as it is defined. It’s also known as a Self-Executing Anonymous Function
+  A nested function can access variables declared inside it’s code block and inside it’s parent code block.
+
+  A closure is a function enclosed with references to its surrounding state (the lexical environment). A closure gives access to an outer function’s scope from an inner function.
+
+  If a variable is declared inside a code block {...}, it’s only visible inside that block.
+
+
+
+
+
+
+  
+
+  
+
+
 
 -->

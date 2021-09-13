@@ -7,16 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FrontEndDemo</title>
+  <link rel="stylesheet" href="FrontEndDemo.css">
+  <script defer src="FrontEndDemo.js"></script>
 </head>
 
 <body>
-  <form>
-    <label name="Username">Username:</label><br>
-    <input type="text" id="username"><br><br>
-    <label name="Password">Password:</label><br>
-    <input type="password" id="password"><br><br>
-    <input type="submit" value="submit">
-  </form>
+  <main id="main-holder">
+    <h1 id="login-header">Tech Store Login</h1>
+    <a href="https://www.google.com/">
+      <img alt="Tech Store" src="https://www.pngitem.com/pimgs/m/176-1763264_electronics-store-electronic-store-png-transparent-png.png"
+      width="300">
+    </a>
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
 </body>
 
 </html>
