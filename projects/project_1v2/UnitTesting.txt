@@ -1,0 +1,18 @@
+Unit Testing is the process of providing code that is going to run specified methods or objects in code without having to run a debugger
+
+Three parts of Unit Tests
+
+# arrange = instance of the entity to test
+
+# sut (subject under test)
+
+# act = execute sut for data
+
+actual (i.e., actual data being tested)
+
+assert = 
+
+Assert (making the assertion the data is not null)
+
+
+The concept of running tests is part of TDD (Test Driven Development) --> aka Red Green Refactor

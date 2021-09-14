@@ -1,0 +1,21 @@
+
+html{
+  font: sans-serif;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #3a3a3a;
+}
+
+.center{
+  display:block;
+  justify-content: auto;
+  align-items: auto;
+  width: 50%;
+}

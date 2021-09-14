@@ -1,0 +1,199 @@
+SCM = Source control management (right now we use Github)
+
+SCM contains:
+- VCS = version control system 
+- Roles and Permissions: involves different types of postions and who is allowed and/or who has access to specific level information.
+  # e.g., developers, analysts, test engineer, project manager, project lead
+- Processes: allows for us to know when to version code, how to manage, and when to deploy.
+- Environments: There are many types of environments; Local, remote, dev, testing, quality control, user acceptance, A and B testing, grean blue deployment
+  # local environments (local machine)
+  # remote environments (Github)
+  # To start think about the local machine as the dev environment and the remote servers as testing/staging/production environments.
+- Deployments: the knowledge of deployment (moving code between environments) and the cadence (timeline) of how often.
+  # Understanding how to move code to/from environments
+  # How often we move code to/from environments (hours, days, months etc..)
+- Artificats: 
+  # e.g., SDKs, APIs, files, documentation, WiKis, etc...
+- Project Management
+
+VCS (Git) - git is a VCS
+# VCS essentially gives us the ability to put our code somewhere.
+- source code
+- tracking {allows us to see code evolution, what needs to be part of the source code vs what's expiremental, and when something needs to be pushed}
+- branch {branching provides the ability to have multiple types of developers to contribute to source code}
+- history {this is important to see what has been done and where we need to go; and can highlight mistakes for improvement}
+- code management/reviews {secure, maintainable, testable, modular}
+- Types of VCS {Centralized and Distributed}
+  # Centralized: machines (local) <---> server (remote); provides a 1:M and 1:1 relational
+    #> Advantages: control and secure; Disadvantage: brittle
+    # Types: TFS; Perforce; SVN
+    # Library system
+  # Distributed: machines (local) <---> many servers (remote); provides 1:M relationship
+    # Advantages: control and secure
+    # Types: Git; SVN.
+    # Peer to Peer systems
+
+Git commands
+
+- git init = intializes the repository {a command that is called for initialization of a repo}
+- git add = ability to select the resources to track
+- git commit = ability to save the changes of the selected resources
+- git push = ability to sync from local to remote
+  # Examples
+    > git push --set-upstream origin main
+- git pull = sync from remote to local
+  --> git fetch = shows what changes have been made to the repo
+  --> git rebase 
+- git clone = intital sync/copy from remote to local {is like pulling in the sense of establishing the first copy for availability to sync from repos}
+- git status = print the current state of the repository
+- git log = prints the history of the repository
+- git branch = create a new parallel branch to source code
+- git config = gives the ability to configure your user information to the repository
+  # Examles
+    > git config --global user.name "Your Name"
+    > git config --global user.email "your@email.com"
+
+
+Syntax: [command] [option] [flag] 
+
+
+## CLI = Command Line Interface
+
+- emulator = application that gives access to a shell {acts as an interface to a shell}
+  # VS code
+  # Windows Terminal
+  # Git Bash
+- shell = interface to the os/kernel {types: bash, zsh, ksh, fish, tcsh}
+- pwd = print working directory {prints current path}
+- ls = list the current resources in your path
+- mkdir = creates a directory 
+- touch = creates a file
+- rm = remove/delete a resource/path(e.g., a directory, folder, file, link)
+- mv = move resource from one path to another
+- cd = change directory {gives ability to change/navigate between/from the present path to another path}
+
+
+Markdown Language
+
+
+
+## .NET
+
+- platform = Web, Mobile, Desktop, Drivers, Data, AI/ML, VR/MR/AR, Gaming (i.e., Unity)
+- languages = C#, F#, JS, Python, VB, VB.NET, JAVA Runtime, C, C++, MongoDB
+- sdk = software development kit, 
+  # .NET Standard (StdLib) = merged .NET Framework and .NET Core
+  # .NET Framework = Windows only
+  # .NET Core = all OS
+- Web = ASP.NET (MVC, WebAPI, SignalR, WCF)
+- Mobile = Xamarin (iOS, iPADOS, macOS supported, Android)
+- Desktop = UWP/UAP, XAML (Windows only) 
+- Drivers = .NET StdLib
+- Data = Entity Framework, ADO.NET
+- AI/ML = ML.NET (supports machine learning and neural networks)
+- VR/MR/AR = Hololens, Azure Vision
+- Gaming = Unity Engine
+
+## dotnet
+- new = create a new project/solution
+- build = compile the code
+- run = execute the code
+
+
+Commands
+dotnet new = gives you all the applications you can build
+dotnet build = testing compilation
+dotnet run = compiles and runs the application
+
+Scopes of C#
+1. namespace 
+2. class
+3. method
+4. block
+
+Note: Writing code best practice: Focus logic first; Then Focus constraints i.e., types, parameters, etc..
+
+SOLID: a set of principles that dictate how technically code should be written
+
+Our first program is Calculator
+
+using System; 
+
+namespace Calculator
+{
+   class Program
+   {
+      static voice main (string[] args)
+      {
+	 // inputs
+	 var input1 = Console.ReadLine(); // Type inference: the value dictates the type
+	 var input2 = Console.ReadLine(); 
+	 // computing
+	 var fuse1 = input1 and input2;
+	 // output
+	 Console.WriteLine(fuse1);
+      }
+   }
+}
+
+The code above shows a basic system of calculation; The simplistic sense to what is needing to be accomplished.
+1. In order to do any math calculations it first needs two inputs 
+2. In order to at least compute the inputs both need to combined (i.e., + - * /)
+3. In order to have output the value, the collective variables need to be shown 
+
+One of the thoughts for the above code was to allude to the responsibility of main() 
+	# Did the code retain that responsibility?
+	# If it doesn't the code isn't quite correct.
+Another thought is the Logic correct first ---> Before contraints are implemented, understand if the logic works
+
+
+Inference:
+Parsing: when a parse is used it takes only part of the value and drops the rest
+Casting: when a cast is used it takes the whole of the values
+  #Implicit
+  #Explicit
+
+var doesn't have a type until runtime.
+Type Families (value, reference)
+Primitive types
+non-primitive types
+
+# In code pick one or the other
+Parse: taking part of the value
+Cast: taking the entire data type
+
+
+Note: C# Code - is only understood by .NET
+Compilation Process
+
+C# Code ---> compiler ---> CIL (Common Intermediate Language)
+ |
+ |
+ v
+Assembly --- > is an intermediate language
+ |   - dll (dynamic link libraries)
+ |  - exe (executable)
+ |   - svc (services)
+ v
+CLR (Common language runtime)
+ |  {
+   BCL (Base class library) i.e, has primitive, etc...
+ | CTS (Common Type System) e.g., allows coversion by common types in different language supported by .NET
+ | VES (Virtual Execution System) i.e., JVM
+JIT (Just-in-Time Compiler)
+ | }
+ |
+ v
+bytecode (machien code)
+ |
+ |
+ v
+CPU
+
+Note: Reasons we do this
+- portability
+- interoperability
+- memory management (garbage collection)
+- performance (normalized)
+
+

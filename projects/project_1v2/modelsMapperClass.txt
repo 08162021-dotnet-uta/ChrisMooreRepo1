@@ -1,0 +1,34 @@
+Timestamp 34:00 He put the mapper in Business logic layer
+
+According to Mark in the Video the model mapping is for pulling into and pulling out of the database 
+with the mapping methods
+
+Take for instance the customer model mapper class below
+Its mapping betwen Entity Framework Models and View Models (e.g., viewmodelCustomer.cs, viewmodelProduct.cs) Mark Created:
+
+public static class ModelMapper
+{
+	//This method takes a customer and returns the mapping to a ViewModelCustomer
+
+	
+	public static public ViewModelCustomer CustomerToViewModelCustomer(Customer c)
+	{
+		ViewModelCustomer c1 = new ViewModelCustomer();
+		c1.viewmodelfname = c.efmodelFirstName
+		c1.viewmodellname = c.efmodelLastName
+
+		return c1;
+	}
+
+	//This method takes a ViewModelCustomer and returns the mapping to a Customer
+	public static public Customer CustomerToViewModelCustomer(ViewModelCustomer c)
+	{
+		Customer c1 = new Customer();
+		c1.efmodelFirstName = c.viewmodelfname
+		c1.efmodelLastName = c.viewmodellname
+
+		return c1;
+	}
+
+
+}

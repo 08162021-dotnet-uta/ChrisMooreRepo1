@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Project1.WebStoreDBContext.Models
+namespace Project1.WebStoreApplication.DbContext.Models
 {
     public partial class Order
     {
@@ -12,10 +12,11 @@ namespace Project1.WebStoreDBContext.Models
             ItemizedOrders = new HashSet<ItemizedOrder>();
         }
 
-        public Guid OrderId { get; set; }
+        public int OrderId { get; set; }
         public int StoreId { get; set; }
         public int CustomerId { get; set; }
         public DateTime OrderDate { get; set; }
+        public decimal TotalPrice { get; set; }
 
         public virtual Customer Customer { get; set; }
         public virtual Store Store { get; set; }
